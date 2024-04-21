@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TasksApp</string>
+    <string name="enter_a_task_name">Enter a task name</string>
+    <string name="save_task">Save Task</string>
+    <string name="done">Done?</string>
+    <string name="task_done">Done?</string>
+    <string name="update_task">Update Task</string>
+    <string name="delete_task">Delete Task</string>
+</resources>

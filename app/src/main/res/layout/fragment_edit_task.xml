@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditTaskFragment">
+        <data>
+            <variable
+                name="viewModel"
+                type="com.example.tasksapp.EditTaskViewModel" />
+        </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:id="@+id/task_name"
+            android:text="@={viewModel.task.taskName}"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/task_done"
+            android:textSize="16sp"
+            android:checked="@{viewModel.task.taskDone}"
+            android:onClick="@{()->viewModel.doneTask()}"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/update_button"
+            android:layout_gravity="center"
+            android:text="@string/update_task"
+            android:onClick="@{()->viewModel.updateTask()}"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_button"
+            android:layout_gravity="center"
+            android:text="@string/delete_task"
+            android:onClick="@{()->viewModel.deleteTask()}"/>
+    </LinearLayout>
+
+</layout>
